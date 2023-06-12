@@ -71,6 +71,12 @@
             cursor.style.display = 'block';
             isCursorVisible = true;
             });
+            
+            $(document).ready(function(){ 
+            $(window).scroll(function(){
+            $('.poesiadedireita').css('transform', 'translate3d(0,' + $(this).scrollTop()*2 + 'px, 0)'); 
+            }).scroll();
+            });  
         </script>
 </body>
 </html>
