@@ -181,6 +181,27 @@ iframe {
     z-index: 1;
 }
 
+.poesiadeesquerda {
+  width: 50%;
+  height: 1800px;
+  background: green;
+  color: #fff;
+  float: left;
+  text-align: center;
+}
+
+.poesiadedireita {
+  width: 50%;
+  
+  height: 1800px;
+  margin-top: -1500px; /*Start offset, put it at same as*/
+  
+  background: #191f27;
+  color: #35ff99;
+  float: left;
+  text-align: centeR;
+}
+
 /*<h1>lucas barros</h1>
 <h3>lorem ipsum</h3>
 <a href="https://www.tiktok.com/@notlucasbarros">meu tiktok</a>
