@@ -60,9 +60,10 @@ body {
 .linkspace {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
     padding: 5%;
-    margin-bottom: 0%;
+    margin-bottom: 10%;
     text-align: center;
 }
 
