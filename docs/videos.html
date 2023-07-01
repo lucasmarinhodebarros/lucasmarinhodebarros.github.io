@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lucas Barros</title>
+<link rel="icon" type="image/x-icon" href="icons/MyFavicon.jpg">
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="script.js"></script>
+</head>
+<body>
+    <nav class="dropdown">
+        <button onclick="toggleMenu()" class="linkM">Menu</button>
+        <div id="menu" class="menu-content">
+          <a href="index.html">início</a>
+          <a href="sobremim.html">sobre mim</a>
+        </nav>
+            <iframe src="https://player.vimeo.com/video/824941756" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/833324996" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <ul>
+        <div class="cursor"></div>
+    </ul>
+    <script>
+        /*const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        })*/
+
+        const cursor = document.querySelector('.cursor');
+        const videos = document.querySelectorAll('iframe');
+        let isCursorVisible = true;
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+
+            if (!isCursorVisible) {
+                cursor.style.display = 'block';
+                isCursorVisible = true;
+            }
+        });
+
+        document.addEventListener('mouseout', () => {
+            cursor.style.display = 'none';
+            isCursorVisible = false;
+            });
+
+        document.addEventListener('mouseover', () => {
+            cursor.style.display = 'block';
+            isCursorVisible = true;
+            });
+
+        videos.forEach(video => {
+            video.addEventListener('mouseenter', () => {
+                cursor.style.display = 'none';
+            });
+
+            video.addEventListener('mouseleave', () => {
+                cursor.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
