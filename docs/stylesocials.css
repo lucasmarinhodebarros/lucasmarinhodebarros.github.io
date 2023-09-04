@@ -39,7 +39,7 @@ body {
     top: 0%;
     padding-top: 12%;
     margin-bottom: 2%;
-    display: inline-grid;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     text-align: center;
