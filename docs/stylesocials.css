@@ -73,6 +73,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 4%;
+    flex-wrap: wrap;
 }
 
 .links {
@@ -87,26 +88,30 @@ body {
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     border-style: none;
-    text-align: center; /* Centralizar texto */
+    text-align: center;
 }
 
-/* Estilos para telas menores */
-@media (max-width: 600px) {
-    .profile {
-        padding-top: 25%; /* Aumentar o espaço para a foto e o nome */
-    }
+.link-container :active {
+    transition: 0.1s;
+    border-radius: 5px;
+    border-style: none;
+    mix-blend-mode: exclusion;
+}
 
-    .pfp {
-        max-width: 50%; /* Reduzir o tamanho da foto */
-        max-height: 50%;
-    }
+.link-container :hover {
+    transition: 0.4s;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    border-style: none;
+}
+  
+.icons {
+    max-width: 9%;
+    max-height: 9%;
+    margin: 1.5%;
+}
 
-    .pfpname {
-        margin-left: 0; /* Centralizar o nome */
-    }
-
-    .link-container {
-        width: 100%; /* Fazer com que os botões ocupem toda a largura */
-        text-align: center; /* Centralizar os botões */
-    }
+.links img {
+    margin-left: 1%;
+    margin-right: 23%;
 }
