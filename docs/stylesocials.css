@@ -38,13 +38,14 @@ body {
     position: fixed;
     top: 0%;
     padding-top: 12%;
-    display: inline-grid;
+    display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
 .pfp {
+    pointer-events: none;
     margin: 2%;
     max-width: 23%;
     max-height: 23%;
