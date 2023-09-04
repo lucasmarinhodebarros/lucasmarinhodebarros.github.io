@@ -38,7 +38,8 @@ body {
     position: fixed;
     top: 0%;
     padding-top: 12%;
-    display: inline-flex;
+    margin-bottom: 2%;
+    display: inline-grid;
     justify-content: center;
     align-items: center;
     text-align: center;
