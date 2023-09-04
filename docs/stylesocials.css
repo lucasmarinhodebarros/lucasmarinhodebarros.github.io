@@ -87,29 +87,26 @@ body {
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     border-style: none;
+    text-align: center; /* Centralizar texto */
 }
 
-.link-container :active {
-    transition: 0.1s;
-    border-radius: 5px;
-    border-style: none;
-    mix-blend-mode: exclusion;
-}
+/* Estilos para telas menores */
+@media (max-width: 600px) {
+    .profile {
+        padding-top: 25%; /* Aumentar o espaço para a foto e o nome */
+    }
 
-.link-container :hover {
-    transition: 0.4s;
-    background-color: #eeeeee;
-    border-radius: 5px;
-    border-style: none;
-}
-  
-.icons {
-    max-width: 9%;
-    max-height: 9%;
-    margin: 1.5%;
-}
+    .pfp {
+        max-width: 50%; /* Reduzir o tamanho da foto */
+        max-height: 50%;
+    }
 
-.links img {
-    margin-left: 1%;
-    margin-right: 23%;
+    .pfpname {
+        margin-left: 0; /* Centralizar o nome */
+    }
+
+    .link-container {
+        width: 100%; /* Fazer com que os botões ocupem toda a largura */
+        text-align: center; /* Centralizar os botões */
+    }
 }
