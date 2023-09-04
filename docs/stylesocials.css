@@ -38,8 +38,7 @@ body {
     position: fixed;
     top: 0%;
     padding-top: 12%;
-    margin-bottom: 2%;
-    display: inline-flex;
+    display: inline-grid;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -54,6 +53,7 @@ body {
 }
 
 .pfpname {
+    margin-bottom: 2%;
     margin-left: 5%;
     font-family: "roc-grotesk-wide";
 }
