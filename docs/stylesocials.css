@@ -38,6 +38,7 @@ body {
     position: fixed;
     top: 0%;
     padding-top: 12%;
+    margin-bottom: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +46,6 @@ body {
 }
 
 .pfp {
-    pointer-events: none;
     margin: 2%;
     max-width: 23%;
     max-height: 23%;
