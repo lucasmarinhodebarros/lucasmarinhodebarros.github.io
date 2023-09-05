@@ -42,7 +42,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: 1;
 }
 
 .pfp {
@@ -62,10 +61,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
     padding: 5%;
     margin-bottom: 0%;
-    z-index: 2;
 }
 
 .link-container {
