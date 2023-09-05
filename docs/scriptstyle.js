@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
             loadingScreen.style.display = 'none';
         });
 
-var pfpImage = document.getElementById("pfp");
+var pfpImage = document.getElementsByClassName("pfp");
 
         pfpImage.addEventListener("contextmenu", function (e) {
             e.preventDefault(); 
