@@ -3,8 +3,16 @@ window.addEventListener('load', function () {
             loadingScreen.style.display = 'none';
         });
 
-$('img').mousedown(function (e) {
-  if(e.button == 2) { // right click
-    return false; // do nothing!
-  }
-});
+var client = {
+    init: function() {
+        var o = this;
+
+        $("img.pfp").mousedown(function(e){
+            e.preventDefault();
+        });
+
+        $("img.pfp").on("contextmenu", function(e){
+            return false;
+        });
+    }
+};
