@@ -9,7 +9,6 @@
 
 body {
     background: #fafafa;
-    background: linear-gradient(to bottom, #d4d4d4, #fafafa);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,13 +34,15 @@ body {
 }
 
 .profile {
+    background: linear-gradient(to bottom, #d4d4d4, #fafafa);
     position: fixed;
     top: 0%;
-    padding-top: 8%;
+    padding-top: 7%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 1;
 }
 
 .pfp {
@@ -63,6 +64,7 @@ body {
     justify-content: flex-end;
     padding: 5%;
     margin-bottom: 0%;
+    z-index: 2;
 }
 
 .link-container {
