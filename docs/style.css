@@ -8,6 +8,12 @@
     cursor: none;
 }
 
+@media (max-width: 767px) {
+  .custom-cursor {
+    cursor: default;
+  }
+}
+
 body {
     background: rgb(250, 250, 250);
     display: flex;
