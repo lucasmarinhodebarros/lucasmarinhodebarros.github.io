@@ -5,13 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "roc-grotesk";
-    cursor: none;
-}
-
-@media (max-width: 767px) {
-  .custom-cursor {
-    cursor: default;
-  }
+    /*cursor: none;*/
 }
 
 body {
@@ -105,7 +99,7 @@ ul li {
     transform: scale(0.5);
 }
 
-.cursor {
+/*.cursor {
     filter: grayscale(100%);
     position: fixed;
     width: 20px;
@@ -121,7 +115,7 @@ ul li {
 
 ul li:hover ~ .cursor {
     transform: scale(6);
-}
+}*/
 
 .tiktok {
     transition: 0.2s;
@@ -130,9 +124,9 @@ ul li:hover ~ .cursor {
     padding: 2%;
 }
 
-.tiktok:hover ~ .cursor {
+/*.tiktok:hover ~ .cursor {
     transform: scale(0);
-}
+}*/
 
 .dropdown {
     position: absolute;
