@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 - errou o caminho!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* escurece o fundo */
+      z-index: -1;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    a.button {
+      background-color: white;
+      color: black;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: 0.3s ease;
+    }
+
+    a.button:hover {
+      background-color: #ddd;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      a.button {
+        padding: 10px 20px;
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background" id="gif-bg"></div>
+  <div class="overlay"></div>
+
+  <div class="content">
+    <h1>errou o caminho!</h1>
+    <a class="button" href="/">voltar para home</a>
+  </div>
+
+  <script>
+    const gifs = [
+      "https://media.giphy.com/media/3og0INyCmHlNylks9O/giphy.gif",
+      "https://media.giphy.com/media/Nc205x6l9KIAy3ITXJ/giphy.gif",
+      "https://media.giphy.com/media/EFXGvbDPhLoWs/giphy.gif",
+      "https://media.giphy.com/media/d3EdJTouFN890fMnGP/giphy.gif"
+    ];
+
+    const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+    document.getElementById("gif-bg").style.backgroundImage = `url(${randomGif})`;
+  </script>
+
+</body>
+</html>
