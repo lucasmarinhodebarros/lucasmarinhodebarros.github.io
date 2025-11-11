@@ -1,0 +1,16 @@
+:root {
+  --color-primary: #000000;
+  --color-secondary: #444444;
+  --color-white: #ffffff;
+  --color-background: #ffffff;
+  --color-overlay: rgba(0, 0, 0, 0.8);
+  --color-menu-overlay: rgba(255, 255, 255, 0.15);
+}
+
+.dark {
+  --color-primary: #ffffff;
+  --color-secondary: #cccccc;
+  --color-background: #000000;
+  --color-overlay: rgba(0, 0, 0, 0.9);
+  --color-menu-overlay: rgba(0, 0, 0, 0.15);
+}
