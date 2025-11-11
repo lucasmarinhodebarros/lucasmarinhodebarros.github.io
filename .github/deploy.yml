@@ -1,0 +1,39 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js (with npm cache)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies (docs)
+        run: npm ci
+        working-directory: docs
+
+      - name: Build (docs)
+        run: npm run build
+        working-directory: docs
+
+      - name: Show built files (for debugging)
+        run: |
+          echo "Contents of docs/build:"
+          ls -la docs/build || true
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/build
+          publish_branch: gh-pages
+          # If you use a custom domain (CNAME) placed under docs/, the action will preserve it
