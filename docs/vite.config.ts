@@ -4,7 +4,7 @@
   import path from 'path';
 
   export default defineConfig({
-    base: '/', // Serve from root (custom domain: https://lucasmarinho.com). Change to '/<repo>/' if using GitHub Pages repo.
+    base: './', // Serve from root (custom domain: https://lucasmarinho.com). Change to '/<repo>/' if using GitHub Pages repo.
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
