@@ -4,7 +4,6 @@
   import path from 'path';
 
   export default defineConfig({
-    root: 'docs',
     base: '/', // Serve from root (custom domain: https://lucasmarinho.com). Change to '/<repo>/' if using GitHub Pages repo.
     plugins: [react()],
     resolve: {
@@ -53,7 +52,7 @@
     },
     build: {
       target: 'esnext',
-      outDir: 'docs/build',
+      outDir: 'build',
     },
     server: {
       port: 3000,
