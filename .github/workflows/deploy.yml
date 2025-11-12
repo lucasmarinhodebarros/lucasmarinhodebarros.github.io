@@ -31,12 +31,13 @@ jobs:
           echo "Contents of docs/build:"
           ls -la docs/build || true
 
-      - name: Deploy to gh-pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/build
+          publish_dir: ./docs/dist
           publish_branch: gh-pages
           # If you use a custom domain (CNAME) placed under docs/, the action will preserve it
+
 
 
