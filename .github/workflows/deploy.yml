@@ -20,11 +20,11 @@ jobs:
 
       - name: Install dependencies (docs)
         run: npm ci
-        working-directory: docs
+        working-directory: ./docs
 
       - name: Build (docs)
         run: npm run build
-        working-directory: docs
+        working-directory: ./docs
 
       - name: Show built files (for debugging)
         run: |
@@ -38,6 +38,7 @@ jobs:
           publish_dir: ./docs/dist
           publish_branch: gh-pages
           # If you use a custom domain (CNAME) placed under docs/, the action will preserve it
+
 
 
 
