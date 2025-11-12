@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
+          working-directory: docs
 
       - name: Install dependencies (docs)
         run: npm ci
@@ -37,3 +38,4 @@ jobs:
           publish_dir: ./docs/build
           publish_branch: gh-pages
           # If you use a custom domain (CNAME) placed under docs/, the action will preserve it
+
