@@ -16,7 +16,7 @@ export function Footer({ showSocial = true }: FooterProps) {
     },
     { 
       name: 'YouTube', 
-      iconUrl: '/images/Lucas_Marinho_YouTube.svg',
+      iconUrl: '/images/Lucas_MarinhoYouTube.svg',
       url: 'https://youtube.com/@lucasmarinho1' 
     },
     { 
