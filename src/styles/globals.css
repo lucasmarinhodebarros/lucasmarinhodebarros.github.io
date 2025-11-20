@@ -126,7 +126,8 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    background: linear-gradient(180deg, hsl(0, 0%, 100%), hsl(0, 80%, 90%));
+    @apply text-foreground;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 900;
     -webkit-font-smoothing: antialiased;
