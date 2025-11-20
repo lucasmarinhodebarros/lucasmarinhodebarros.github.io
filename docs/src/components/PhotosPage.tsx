@@ -14,7 +14,6 @@ export function PhotosPage({ isPhotoOpen, setIsPhotoOpen }: PhotosPageProps) {
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [direction, setDirection] = useState(0);
 
-  // Photo gallery data with metadata
   const photoData = [
     { 
       id: 1, 
@@ -183,7 +182,7 @@ export function PhotosPage({ isPhotoOpen, setIsPhotoOpen }: PhotosPageProps) {
         </div>
 
         {/* Photo Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-xs md:max-w-xl mx-auto">
           {photoData.map((photo, index) => (
             <motion.div
               key={photo.id}
@@ -205,16 +204,14 @@ export function PhotosPage({ isPhotoOpen, setIsPhotoOpen }: PhotosPageProps) {
 
         {/* Instagram Embed */}
         <div className="text-center mt-12 md:mt-16">
-          <h3 className="mb-6" style={{ color: '#000000' }}>me siga no instagram</h3>
+          <h3 className="mb-6" style={{ color: '#000000' }}>me siga no Instagram</h3>
           <div className="flex justify-center">
             <iframe
               src="https://www.instagram.com/lucasmarinho/embed"
-              width="400"
-              height="410"
+              className="border rounded-lg shadow-lg w-[310px] h-[330px] md:w-[400px] md:h-[410px]"
               frameBorder="0"
               scrolling="no"
-              className="border rounded-lg shadow-lg"
-              style={{ maxWidth: '100%', overflow: 'hidden' }}
+              style={{ overflow: 'hidden' }}
             />
           </div>
         </div>
@@ -271,7 +268,7 @@ export function PhotosPage({ isPhotoOpen, setIsPhotoOpen }: PhotosPageProps) {
 
             {/* Left Navigation Area */}
             <div 
-              className="absolute left-0 top-0 bottom-0 w-1/3 z-30 flex items-center justify-start pl-4 md:pl-8 group pointer-events-auto"
+              className="absolute left-0 top-0 bottom-0 w-1/6 z-30 flex items-center justify-start pl-4 md:pl-8 group pointer-events-auto"
               onClick={(e) => {
                 e.stopPropagation();
                 navigatePhoto(-1);
@@ -285,7 +282,7 @@ export function PhotosPage({ isPhotoOpen, setIsPhotoOpen }: PhotosPageProps) {
 
             {/* Right Navigation Area */}
             <div 
-              className="absolute right-0 top-0 bottom-0 w-1/3 z-30 flex items-center justify-end pr-4 md:pr-8 group pointer-events-auto"
+              className="absolute right-0 top-0 bottom-0 w-1/6 z-30 flex items-center justify-end pr-4 md:pr-8 group pointer-events-auto"
               onClick={(e) => {
                 e.stopPropagation();
                 navigatePhoto(1);
